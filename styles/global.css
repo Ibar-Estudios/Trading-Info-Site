@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    background-image: url(../../src/assets/image/grafity.avif);
+    background-image: url(/assets/image/grafity.avif);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 25% 10%;

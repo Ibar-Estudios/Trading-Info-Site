@@ -47,10 +47,26 @@
     background-size: cover;
 }
 
-.concepto { background-color: rgba(67, 37, 102, 0.5); }
-.periodos  { background-color: rgba(165, 45, 45, 0.5); }
-.mercados  { background-color: rgba(67, 37, 102, 0.5); }
-.tecnicas  { background-color: rgba(165, 45, 45, 0.5); }
+.concepto {
+    background-image: linear-gradient(rgba(67, 37, 102, 0.65), rgba(67, 37, 102, 0.65)), url(/assets/image/scalping.jpg);
+    background-position: center;
+    background-attachment: fixed;
+}
+.periodos  {
+    background-image: linear-gradient(rgba(165, 45, 45, 0.65), rgba(165, 45, 45, 0.65)), url(/assets/image/fondo-lista.png);
+    background-position: center;
+    background-attachment: fixed;
+}
+.mercados  {
+    background-image: linear-gradient(rgba(67, 37, 102, 0.65), rgba(67, 37, 102, 0.65)), url(/assets/image/imag-trading.png);
+    background-position: center 20%;
+    background-attachment: fixed;
+}
+.tecnicas  {
+    background-image: linear-gradient(rgba(165, 45, 45, 0.65), rgba(165, 45, 45, 0.65)), url(/assets/image/scalping.jpg);
+    background-position: center;
+    background-attachment: fixed;
+}
 
 .concepto article,
 .periodos article,

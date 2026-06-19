@@ -38,11 +38,25 @@
     color: aliceblue;
 }
 
+/* Toggle hamburguesa <-> X */
+.icon-close {
+    display: none;
+}
+
+.menu-home details[open] summary .icon-open {
+    display: none;
+}
+
+.menu-home details[open] summary .icon-close {
+    display: block;
+    color: #2dc7c7;
+}
+
 /* Dropdown links */
 .menu-home details[open] {
     background: rgba(0,0,0,0.92);
     border-radius: 0 0 8px 8px;
-    margin-top: 1.5rem;
+    margin-top: 9rem;
 }
 
 .menu-home details li {
@@ -108,7 +122,10 @@ main {
 }
 
 #trading {
-    background-color: rgba(170, 170, 170, 0.4);
+    background-image: linear-gradient(rgba(170, 170, 170, 0.55), rgba(170, 170, 170, 0.55)), url(/assets/image/fondo-lista.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #trading article {
@@ -119,7 +136,10 @@ main {
 }
 
 #fundamentos {
-    background-color: rgba(95, 158, 160, 0.4);
+    background-image: linear-gradient(rgba(95, 158, 160, 0.6), rgba(95, 158, 160, 0.6)), url(/assets/image/imag-trading.png);
+    background-size: cover;
+    background-position: center 20%;
+    background-attachment: fixed;
 }
 
 #fundamentos article {
@@ -130,7 +150,10 @@ main {
 }
 
 #tipos {
-    background-color: rgba(170, 170, 170, 0.4);
+    background-image: linear-gradient(rgba(170, 170, 170, 0.55), rgba(170, 170, 170, 0.55)), url(/assets/image/scalping.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #tipos article {
@@ -197,7 +220,10 @@ table th {
 }
 
 #herramientas {
-    background-color: rgba(95, 158, 160, 0.4);
+    background-image: linear-gradient(rgba(95, 158, 160, 0.6), rgba(95, 158, 160, 0.6)), url(/assets/image/fondo-lista.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #herramientas article {
