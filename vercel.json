@@ -1,6 +1,9 @@
 {
   "version": 2,
-  "buildCommand": "echo 'No build needed'",
-  "outputDirectory": "src",
-  "installCommand": "echo 'No install needed'"
+  "builds": [
+    {
+      "src": "src/**/*",
+      "use": "@vercel/static"
+    }
+  ]
 }
