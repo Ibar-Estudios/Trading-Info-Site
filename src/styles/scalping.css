@@ -1,0 +1,126 @@
+/******* NAV SCALPING *******/
+.menu-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    min-height: 4rem;
+}
+
+.menu-nav img {
+    width: 80px;
+    height: auto;
+}
+
+.menu-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.menu-nav ul li {
+    display: inline-block;
+    margin: 0;
+}
+
+.menu-nav ul li a {
+    color: #ccc;
+    padding: 0.4rem 0.75rem;
+    transition: color 0.2s;
+}
+
+.menu-nav ul li a:hover {
+    color: #2dc7c7;
+}
+
+/******* SECTIONS *******/
+.concepto,
+.periodos,
+.mercados,
+.tecnicas {
+    width: 100%;
+    padding: 2rem 0;
+    background-size: cover;
+}
+
+.concepto { background-color: rgba(67, 37, 102, 0.5); }
+.periodos  { background-color: rgba(165, 45, 45, 0.5); }
+.mercados  { background-color: rgba(67, 37, 102, 0.5); }
+.tecnicas  { background-color: rgba(165, 45, 45, 0.5); }
+
+.concepto article,
+.periodos article,
+.mercados article,
+.tecnicas article {
+    margin: 0 3rem 1rem 3rem;
+    padding: 2rem;
+    border: #aaa solid 0.1rem;
+    border-radius: 0.7rem;
+}
+
+.concepto ul,
+.periodos ul,
+.mercados ul,
+.tecnicas ul {
+    text-align: left;
+}
+
+/* Section headings */
+.concepto h2,
+.periodos h2,
+.mercados h2,
+.tecnicas h2 {
+    background-color: rgba(170,170,170,0.6);
+    text-align: center;
+    padding: 0.5rem;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    margin-bottom: 1.25rem;
+    border-radius: 4px;
+}
+
+/* Periodos: iframe responsivo */
+.periodos iframe {
+    width: 100%;
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+    display: block;
+    margin: 1.5rem auto 0;
+    border: none;
+    border-radius: 8px;
+}
+
+/******* RESPONSIVE SCALPING *******/
+@media (max-width: 768px) {
+    .concepto article,
+    .periodos article,
+    .mercados article,
+    .tecnicas article {
+        margin: 0 1rem 1rem 1rem;
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-nav {
+        padding: 0.5rem 1rem;
+    }
+
+    .concepto article,
+    .periodos article,
+    .mercados article,
+    .tecnicas article {
+        margin: 0 0.5rem 0.75rem 0.5rem;
+        padding: 1rem 0.75rem;
+    }
+
+    .concepto h2,
+    .periodos h2,
+    .mercados h2,
+    .tecnicas h2 {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,246 @@
+/******* NAV HOME *******/
+.menu-home {
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 253, 253);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 1.5rem;
+    height: 4rem;
+    backdrop-filter: blur(4px);
+}
+
+/* Hamburger menu (details/summary) */
+.menu-home details {
+    position: relative;
+}
+
+.menu-home summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.menu-home summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu-home summary:hover {
+    border: 0.5px solid rgba(255,255,255,0.3);
+    border-radius: 4px;
+    color: aliceblue;
+}
+
+/* Dropdown links */
+.menu-home details[open] {
+    background: rgba(0,0,0,0.92);
+    border-radius: 0 0 8px 8px;
+    margin-top: 1.5rem;
+}
+
+.menu-home details li {
+    display: block;
+    margin: 0;
+    padding: 0.5rem 1rem;
+}
+
+.menu-home details li a {
+    color: #ccc;
+    margin: 0;
+    display: block;
+}
+
+.menu-home details li a:hover {
+    color: #2dc7c7;
+}
+
+/* Right side nav links */
+.menu-home > ul {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu-home > ul li {
+    display: inline-block;
+    margin: 0;
+}
+
+.menu-home > ul li a {
+    color: #ccc;
+    margin: 0;
+    padding: 0.4rem 0.75rem;
+    transition: color 0.2s;
+}
+
+.menu-home > ul li a:hover {
+    color: #2dc7c7;
+    border: none;
+    background: none;
+}
+
+.icon-elem {
+    width: 2rem;
+    height: 2rem;
+    color: white;
+}
+
+/******* SECTIONS *******/
+
+/* Offset for fixed navbar */
+main {
+    padding-top: 4rem;
+}
+
+#trading,
+#fundamentos,
+#tipos,
+#herramientas {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+#trading {
+    background-color: rgba(170, 170, 170, 0.4);
+}
+
+#trading article {
+    margin: 0 3rem 1rem 3rem;
+    padding: 1rem;
+    border: #aaa solid 0.1rem;
+    border-radius: 0.7rem;
+}
+
+#fundamentos {
+    background-color: rgba(95, 158, 160, 0.4);
+}
+
+#fundamentos article {
+    margin: 0 3rem;
+    padding: 1.5rem;
+    border: #aaa solid 0.1rem;
+    border-radius: 0.7rem;
+}
+
+#tipos {
+    background-color: rgba(170, 170, 170, 0.4);
+}
+
+#tipos article {
+    margin: 0 3rem 1rem 3rem;
+    padding: 2rem 1rem;
+    border: #aaa solid 0.1rem;
+    border-radius: 0.7rem;
+}
+
+/* Tipos de trading: iframe + tabla */
+.container-tipos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.container-tipos iframe {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Tabla de tipos: usamos div flex en lugar de th mal usados */
+.tipos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+    min-width: 220px;
+}
+
+.tipo-item {
+    border: 0.2rem solid black;
+    border-radius: 0.3rem;
+    padding: 0.6rem 0.8rem;
+    background: rgba(255,255,255,0.07);
+}
+
+.tipo-item h4 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Tabla original — por compatibilidad */
+table {
+    border-collapse: separate;
+    border-spacing: 6px;
+}
+
+table th {
+    border: 0.2rem solid black;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    font-weight: 400;
+    text-align: left;
+    background: rgba(255,255,255,0.07);
+}
+
+#herramientas {
+    background-color: rgba(95, 158, 160, 0.4);
+}
+
+#herramientas article {
+    margin: 0 3rem;
+    padding: 2rem 1rem;
+    border: #aaa solid 0.1rem;
+    border-radius: 0.7rem;
+}
+
+#herramientas ul {
+    text-align: center;
+}
+
+/******* RESPONSIVE INDEX *******/
+@media (max-width: 768px) {
+    #trading article,
+    #fundamentos article,
+    #tipos article,
+    #herramientas article {
+        margin: 0 1rem 1rem 1rem;
+        padding: 1rem;
+    }
+
+    .container-tipos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-tipos iframe {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-home > ul {
+        display: none; /* En móvil el menú derecho se oculta; queda el hamburger */
+    }
+
+    #trading article,
+    #fundamentos article,
+    #tipos article,
+    #herramientas article {
+        margin: 0 0.5rem 0.75rem 0.5rem;
+        padding: 0.75rem;
+    }
+}
