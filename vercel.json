@@ -1,3 +1,8 @@
 {
-  "version": 2
+  "version": 2,
+  "rewrites": [
+    { "source": "/", "destination": "/pages/index.html" },
+    { "source": "/scalping.html", "destination": "/pages/scalping.html" },
+    { "source": "/form.html", "destination": "/pages/form.html" }
+  ]
 }
